@@ -1,0 +1,68 @@
+tv_up:
+  sequence:
+  - service: remote.send_command
+    data_template:
+      command: VolumeUp
+      device: 55832389
+      entity_id: remote.living_room_3
+      num_repeats: 5
+
+tv_down:
+  sequence:
+  - service: remote.send_command
+    data_template:
+      command: VolumeDown
+      device: 55832389
+      entity_id: remote.living_room_3
+      num_repeats: 5
+
+apple_tv_on:
+  alias: Turn on Apple TV
+  sequence:
+    - service: remote.turn_on
+      data:
+        activity: 'Watch Apple TV'
+
+computer_on:
+  alias: Turn on Computer
+  sequence:
+    - service: remote.turn_on
+      data:
+        activity: 'Computer'
+
+speakers_on:
+  alias: Turn on Speakers
+  sequence:
+    - service: remote.turn_on
+      data:
+        activity: 'Listen to Music'
+
+record_player_on:
+  alias: Turn on Record Player
+  sequence:
+    - service: remote.turn_on
+      data:
+        activity: 'Record'
+
+system_off:
+  alias: Turn off System
+  sequence:
+    - service: remote.turn_off
+      data:
+        activity: 'Watch Apple TV'
+
+projector_on:
+  alias: Turn on Projector
+  sequence:
+    - service: remote.send_command
+      data:
+        command: PowerOn
+        device: 48269040
+
+projector_off:
+  alias: Turn off Projector
+  sequence:
+    - service: remote.send_command
+      data:
+        command: PowerOff
+        device: 48269040

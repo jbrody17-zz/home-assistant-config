@@ -1,0 +1,86 @@
+##
+## Customize
+##
+homeassistant:
+  customize:
+    binary_sensor.the_dike_away:
+      icon: mdi:home-minus
+    sensor.entryway_thermostat_humidity:
+      friendly_name: "Humidity"
+    sensor.entryway_thermostat_temperature:
+      friendly_name: "Temperature"
+    # sensor.entrywayhousetemperature_2:
+    #   friendly_name: "Outside Temperature"
+    sensor.entrywayhousecondition:
+      friendly_name: "Condition"  
+    # sensor.entrywayhousehumidity_2:
+    #   friendly_name: "Outside Humidity"
+    binary_sensor.entryway_thermostat_house_is_using_emergency_heat:
+      friendly_name: "Emergency Heat"
+      hidden: true
+    sensor.entryway_thermostat_house_hvac_state:
+      friendly_name: "Heating Status"
+      icon: mdi:thermometer-lines
+    binary_sensor.entryway_thermostat_house_has_leaf:
+      friendly_name: "Energy Saving"
+      icon: mdi:leaf
+    binary_sensor.entryway_thermostat_fan:
+      hidden: true
+    binary_sensor.entryway_thermostat_is_locked:
+      hidden: true
+    sensor.entryway_thermostat_operation_mode:
+      hidden: true
+    binary_sensor.entryway_thermostat_online:
+      hidden: true
+    sensor.entryway_thermostat_target:
+      hidden: true
+
+##
+## Components/Sensors
+##
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+
+climate:
+  platform: nest
+
+sensor:
+  - platform: nest
+  - platform: template
+    sensors:
+      nest_away_mode:
+        value_template: "{{ states.climate.entryway.attributes.away_mode }}"
+        friendly_name: "Nest Away Mode"
+
+##
+## Recorder/History/Logbook
+##
+recorder:
+  include:
+    entities:
+      # Nest
+      - binary_sensor.the_dike_away # Away Mode
+      # Nest Thermostat
+      - climate.entryway # Aggregate information
+      - sensor.entryway_thermostat_hvac_state # Heating Status
+      - sensor.entryway_thermostat_target # Target Temp
+      - sensor.entryway_thermostat_temperature # Current Temp
+      - sensor.entryway_thermostat_humidity
+
+history:
+  include:
+      entities:
+      # Nest
+      - binary_sensor.the_dike_away # Away Mode 
+      # Nest Thermostat
+      - climate.entryway # Aggregate information
+      - sensor.entryway_thermostat_hvac_state # Heating Status
+      - sensor.entryway_thermostat_target # Target Temp
+      - sensor.entryway_thermostat_temperature # Current Temp
+      - sensor.entryway_thermostat_humidity
+
+logbook:
+  include:
+    entities:
+      - binary_sensor.the_dike_away

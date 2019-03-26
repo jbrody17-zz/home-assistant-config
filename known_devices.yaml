@@ -1,0 +1,274 @@
+johns_iphone:
+  hide_if_away: false
+  icon:
+  mac: 38:53:9C:A6:A0:88
+  name: Johns Phone
+  picture:
+  track: true
+
+johns_iphone_2:
+  hide_if_away: false
+  icon:
+  mac: 02:0F:B5:A6:A0:88
+  name: Johns Phone2
+  picture:
+  track: true
+
+cilantro:
+  hide_if_away: false
+  icon:
+  mac: F0:DB:E2:54:D6:70
+  name: Vics Phone
+  picture:
+  track: true
+
+cilantro_2:
+  hide_if_away: false
+  icon:
+  mac: 02:0F:B5:54:D6:70
+  name: Vics Phone2
+  picture:
+  track: true
+
+connor_iphone:
+  hide_if_away: false
+  icon:
+  mac: 20:EE:28:74:3D:36
+  name: Connors Phone1
+  picture:
+  track: true
+
+connor_iphone_2:
+  hide_if_away: false
+  icon:
+  mac: 02:0F:B5:74:3D:36
+  name: Connors Phone2
+  picture:
+  track: true
+
+lindseysiphone8:
+  hide_if_away: false
+  icon:
+  mac: 9C:E3:3F:35:0D:48
+  name: Lindseys Phone1
+  picture:
+  track: true
+
+lindseysiphone8_2:
+  hide_if_away: false
+  icon:
+  mac: 02:0F:B5:35:0D:48
+  name: Lindseys Phone2
+  picture:
+  track: true
+
+haley_f7rw4h2:
+  hide_if_away: false
+  icon:
+  mac: 02:0F:B5:E7:EA:A5
+  name: Connors PC
+  picture:
+  track: true
+
+haley_f7rw4h2_2:
+  hide_if_away: false
+  icon:
+  mac: 00:28:F8:E7:EA:A5
+  name: Connors PC2
+  picture:
+  track: true
+
+connors_mbp:
+  hide_if_away: false
+  icon:
+  mac: 02:0F:B5:B4:29:A0
+  name: Connors Laptop
+  picture:
+  track: true
+
+connors_mbp_2:
+  hide_if_away: false
+  icon:
+  mac: 60:F8:1D:B4:29:A0
+  name: Connors Laptop2
+  picture:
+  track: true
+
+vics_air:
+  hide_if_away: false
+  icon:
+  mac: 02:0F:B5:F0:70:9F
+  name: Vics Laptop1
+  picture:
+  track: true
+
+vics_air_2:
+  hide_if_away: false
+  icon:
+  mac: 7C:D1:C3:F0:70:9F
+  name: Vics Laptop2
+  picture:
+  track: true
+
+ex3700:
+  hide_if_away: false
+  icon:
+  mac: 02:0F:B5:01:3E:7E
+  name: EX3700
+  picture:
+  track: true
+
+50_e5_49_2e_4f_a0:
+  hide_if_away: false
+  icon:
+  mac: 50:E5:49:2E:4F:A0
+  name: 50:E5:49:2E:4F:A0
+  picture:
+  track: true
+
+7a_d2_94_00_3e_7e:
+  hide_if_away: false
+  icon:
+  mac: 7A:D2:94:00:3E:7E
+  name: 7A:D2:94:00:3E:7E
+  picture:
+  track: true
+
+b8_27_eb_00_25_fa:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:00:25:FA
+  name: B8:27:EB:00:25:FA
+  picture:
+  track: true
+
+02_42_c0_a8_01_17:
+  hide_if_away: false
+  icon:
+  mac: 02:42:C0:A8:01:17
+  name: 02:42:C0:A8:01:17
+  picture:
+  track: true
+
+7a_d2_94_00_3e_7d:
+  hide_if_away: false
+  icon:
+  mac: 7A:D2:94:00:3E:7D
+  name: 7A:D2:94:00:3E:7D
+  picture:
+  track: true
+
+hs105:
+  hide_if_away: false
+  icon:
+  mac: AC:84:C6:2A:B8:A9
+  name: HS105
+  picture:
+  track: true
+
+09aa01ac33180y2x:
+  hide_if_away: false
+  icon:
+  mac: 64:16:66:33:B6:72
+  name: 09AA01AC33180Y2X
+  picture:
+  track: true
+
+desktop_e17jifn:
+  hide_if_away: false
+  icon:
+  mac: 52:54:00:6D:36:FC
+  name: DESKTOP-E17JIFN
+  picture:
+  track: true
+
+desktop_tf5dpjf:
+  mac: 00:D8:61:15:AE:03
+  name: Vics_Computer
+  track: false
+
+harmonyhub:
+  mac: 00:04:20:FF:97:07
+  name: HARMONYHUB
+  track: false
+
+wemo:
+  mac: 94:10:3E:3B:5F:C1
+  name: Wemo
+  track: false
+
+amazon_78817fa41:
+  mac: 4C:EF:C0:42:05:4E
+  name: AMAZON-78817FA41
+  track: false
+
+amazon_c4f2c6937:
+  mac: FC:A6:67:A0:A3:FA
+  name: Amazon_Echo
+  track: false
+
+st_24fd5b000005a93a:
+  mac: 02:0F:B5:05:A9:30
+  name: Smart_Things
+  track: false
+
+living_room:
+  mac: C8:69:CD:7B:B8:02
+  name: Apple_TV
+  track: false
+
+hs105_2:
+  hide_if_away: false
+  icon:
+  mac: 02:0F:B5:2A:B8:A9
+  name: HS105
+  picture:
+  track: true
+
+unknown:
+  hide_if_away: false
+  icon:
+  mac: 02:0F:B5:90:31:24
+  name: UNKNOWN
+  picture:
+  track: true
+
+00_71_47_29_ab_3b:
+  hide_if_away: false
+  icon:
+  mac: 00:71:47:29:AB:3B
+  name: 00:71:47:29:AB:3B
+  picture:
+  track: true
+
+mcc_l_hdzptn2:
+  hide_if_away: false
+  icon:
+  mac: 38:DE:AD:BD:4A:16
+  name: MCC-L-HDZPTN2
+  picture:
+  track: true
+
+02_0f_b5_11_e8_94:
+  hide_if_away: false
+  icon:
+  mac: 02:0F:B5:11:E8:94
+  name: 02:0F:B5:11:E8:94
+  picture:
+  track: true
+
+02_0f_b5_bd_4a_16:
+  hide_if_away: false
+  icon:
+  mac: 02:0F:B5:BD:4A:16
+  name: 02:0F:B5:BD:4A:16
+  picture:
+  track: true
+
+02_0f_b5_a8_01_17:
+  hide_if_away: false
+  icon:
+  mac: 02:0F:B5:A8:01:17
+  name: 02:0F:B5:A8:01:17
+  picture:
+  track: true

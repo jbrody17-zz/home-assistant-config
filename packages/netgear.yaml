@@ -1,0 +1,19 @@
+sensor:
+  - platform: template
+    sensors:
+      vic_home:
+        value_template: "{{ is_state('device_tracker.cilantro', 'home')
+               or is_state('device_tracker.cilanto_2', 'home') }}"
+        friendly_name: "Vic Status"
+      john_home:
+        value_template: "{{ is_state('device_tracker.johns_iphone', 'home')
+               or is_state('device_tracker.johns_iphone_2', 'home') }}"
+        friendly_name: "John Status"
+      connor_home:
+        value_template: "{{ is_state('device_tracker.connor_iphone', 'home')
+               or is_state('device_tracker.connor_iphone_2', 'home') }}"
+        friendly_name: "Connor Status"
+      lindsey_home:
+        value_template: "{{ is_state('device_tracker.lindseysiphone8', 'home')
+               or is_state('device_tracker.lindseysiphone8_2', 'home') }}"
+        friendly_name: "Lindsey Status"

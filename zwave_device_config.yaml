@@ -1,0 +1,6 @@
+light.ge_14295_in_wall_smart_toggle_dimmer_level_3:
+  ignored: false
+  polling_intensity: 1
+light.ge_14295_in_wall_smart_toggle_dimmer_level:
+  ignored: false
+  polling_intensity: 1

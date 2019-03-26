@@ -1,0 +1,14 @@
+history:
+  include:
+      entities:
+        - sensor.living_room_temperature_measurement
+        - sensor.johns_room_temperature_measurement
+        - sensor.living_room_relative_humdiity_measurement
+        - sensor.johns_room_relative_humidity_measurement
+recorder:
+  include:
+      entities:
+        - sensor.living_room_temperature_measurement
+        - sensor.johns_room_temperature_measurement
+        - sensor.living_room_relative_humidity_measurement
+        - sensor.johns_room_relative_humidity_measurement

@@ -1,0 +1,146 @@
+#
+# Home Assistant Main Configuration File
+#
+homeassistant:
+  name: The Dike
+  latitude: !secret latitude_loc_home
+  longitude: !secret longitude_loc_home
+  elevation: !secret evelation_loc_home
+  time_zone: America/New_York
+  temperature_unit: F
+  unit_system: imperial
+  # customize_glob: !include config/customize_glob.yaml
+  customize: !include customize.yaml
+
+  packages: !include_dir_named packages
+
+frontend:
+  javascript_version: latest
+# Working
+# Move to... /packages/zwave.yaml?
+zwave:
+  usb_path: /dev/ttyACM0
+  network_key: "0x69, 0x0A, 0x68, 0x0B, 0x67, 0x0C, 0x66, 0x0D, 0x65, 0x0E, 0x64, 0x0F, 0x63, 0x62, 0x61, 0x60"
+  polling_interval: 30000
+  autoheal: true
+  device_config:
+    light.ge_14295_in_wall_smart_toggle_dimmer_level:
+      polling_intensity: 1
+      refresh_value: 1
+    light.ge_14295_in_wall_smart_toggle_dimmer_level_2:
+      polling_intensity: 1
+      refresh_value: 1
+    light.ge_14295_in_wall_smart_toggle_dimmer_level_3:
+      polling_intensity: 1
+      refresh_value: 1
+
+tplink:
+
+custom_updater:
+  show_installable: true
+  component_urls:
+    - https://raw.githubusercontent.com/keatontaylor/alexa_media_player/master/custom_components.json
+  card_urls:
+    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
+    - https://raw.githubusercontent.com/kuuji/button-card/master/tracker.json
+wemo:
+  discovery: false
+  static:
+    - 192.168.1.133
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+http:
+  base_url: https://hass.thedike.com
+
+# Discover some devices automatically
+discovery:
+
+device_tracker:
+  - platform: netgear
+    host: 192.168.1.1
+    interval_seconds: 10
+    consider_home: 20
+    username: !secret netgear_username
+    password: !secret netgear_password
+
+# Sensors
+sensor:
+  # Weather prediction
+  - platform: template
+    sensors:
+      battery_iphone:
+        friendly_name: John's Battery
+        unit_of_measurement: '%'
+        value_template: >-
+            {% if sensor.johns_iphone_battery_level %}
+                {{ sensor.johns_iphone_battery_level|round }}
+            {% else %}
+                {{ sensor.johns_iphone_battery_state }}
+            {% endif %}
+        device_class: battery
+
+
+# Text to speech
+tts:
+  - platform: google
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+# https://www.home-assistant.io/components/updater/
+updater:
+# https://www.home-assistant.io/components/config/
+config:
+# https://www.home-assistant.io/docs/ecosystem/ios/
+ios:
+# https://www.home-assistant.io/components/map/
+map:
+# https://www.home-assistant.io/components/system_health/
+system_health:
+
+
+scene:
+- name: House Normal
+  entities:
+      light.ge_14295_in_wall_smart_toggle_dimmer_level:
+          state: on
+          transition: 2
+          brightness_pct: 60
+      light.ge_14295_in_wall_smart_toggle_dimmer_level_2:
+          state: on
+          transition: 2
+          brightness_pct: 60
+- name: House Dim
+  entities:
+      light.ge_14295_in_wall_smart_toggle_dimmer_level:
+          state: on
+          transition: 2
+          brightness_pct: 20
+      light.ge_14295_in_wall_smart_toggle_dimmer_level_2:
+          state: on
+          transition: 2
+          brightness_pct: 20
+
+emulated_hue:
+  host_ip: 192.168.1.169
+  listen_port: 8300
+  expose_by_default: false
+  entities:
+    light.ge_14295_in_wall_smart_toggle_dimmer_level:
+      name: "Living Room"
+      hidden: false
+    light.ge_14295_in_wall_smart_toggle_dimmer_level_2:
+      name: "Kitchen"
+      hidden: false
+    light.ge_14295_in_wall_smart_toggle_dimmer_level_3:
+      name: "John's Room"
+      hidden: false
+    switch.monitors:
+      name: "Monitors"
+    script.tv_up:
+      name: "Volume Up"
+      hidden: false
+    script.tv_down:
+      name: "Volume Down"
+      hidden: false

@@ -1,0 +1,55 @@
+- alias: "Playing in Living Room"
+  trigger:
+  - platform: state
+    entity_id: media_player.appletv
+    to: 'playing'
+  action:
+     service: light.turn_off
+     data:
+       transition: "10"
+       entity_id: light.ge_14295_in_wall_smart_toggle_dimmer_level
+
+- alias: "Stopped Playing in Living Room"
+  trigger:
+  - platform: state
+    entity_id: media_player.appletv
+    from: 'playing'
+    to: 'paused'
+  action:
+     service: light.turn_on
+     data:
+       brightness_pct: "50"
+       transition: "10"
+       entity_id: light.ge_14295_in_wall_smart_toggle_dimmer_level
+
+- alias: "Idle in Living Room"
+  trigger:
+  - platform: state
+    entity_id: media_player.appletv
+    to: 'idle'
+  action:
+     service: light.turn_on
+     data:
+       brightness_pct: "50"
+       transition: "10"
+       entity_id: light.ge_14295_in_wall_smart_toggle_dimmer_level
+
+# - alias: "John Arrives"
+#   trigger:
+#     platform: state
+#     entity_id: device_tracker.johns_iphone
+#     from: 'not_home'
+#     to: 'home'
+#   action:
+#    service: scene.turn_on
+#    entity_id: scene.House_Normal
+
+# - alias: "John Leaves"
+#   trigger:
+#     platform: state
+#     entity_id: device_tracker.johns_iphone
+#     from: 'home'
+#     to: 'not_home'
+#   action:
+#    service: scene.turn_on
+#    entity_id: scene.House_Dim

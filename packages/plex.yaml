@@ -1,7 +1,5 @@
 sensor:
 - platform: plex
-
-sensor:
 - platform: template
   sensors:
     plex_living_room_playing:

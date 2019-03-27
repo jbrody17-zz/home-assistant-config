@@ -10,10 +10,10 @@ know-devices.yaml
 *.json
 .editorconfig
 *.data
+*.pyc
 deps
 www
 tts
-custom_components
 .HA_VERSION
 .uuid
 .cloud

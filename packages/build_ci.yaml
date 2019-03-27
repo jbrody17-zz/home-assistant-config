@@ -32,9 +32,10 @@ automation:
 
 sensor:
   - platform: rest
-    resource: https://api.travis-ci.com/repos/jbrody17/home-assistant-config/builds
+    resource: https://api.travis-ci.com/builds
     headers:
-      Accept: application/vnd.travis-ci.2+json
+      Travis-API-Version: 3
+      Authorization: !secret travis_API_KEY
     value_template: "{{ value_json.builds[0].state }}"
     name: "Travis Build Status"
   # - platform: travisci
